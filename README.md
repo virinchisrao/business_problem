@@ -41,23 +41,26 @@ psql -d ecommerce_sales -f sql/init.sql
 Edit config.yaml to add your database credentials.
 
 4️⃣ Install Dependencies
+```bash
 python -m venv venv
+```
 # Activate virtual environment
 # Windows:
+```bash
 venv\Scripts\activate
 # macOS/Linux:
 source venv/bin/activate
 
 pip install -r requirements.txt
-
+```
 5️⃣ Run the Pipeline
 
 Drop CSV files named like online_sales_2025-11-06.csv into data/raw/ and run:
-
+```bash
 python src/main.py
+```
 
-
-Reports appear in output/; query tables in pgAdmin or psql.
+### Reports appear in output/; query tables in pgAdmin or psql.
 
 🔌 Adding REST API Ingestion
 Example Endpoint
@@ -74,23 +77,24 @@ api:
 Set API Key
 
 Windows PowerShell
-
+```bash
 $env:API_KEY="abc123"
 
-
+```
 Linux/macOS
-
+```bash
 export API_KEY=abc123
-
+```
 
 Then rerun:
-
+```bash
 python src/main.py
 
-
+```
 If no API is available, comment out or remove the api: section — the pipeline automatically falls back to CSV-only mode.
 
-🧪 Run Tests
+### 🧪 Run Tests
+```bash
 pip install pytest
 
 # Windows
@@ -98,10 +102,10 @@ $env:PYTHONPATH="."; pytest tests -v
 
 # Linux/macOS
 PYTHONPATH="." pytest tests -v
+```
 
-
-✅ 5 unit tests validate ETL logic.
-
+### ✅ 5 unit tests validate ETL logic.
+```bash
 📁 Folder Map
 data/raw/          ➜ drop CSV files here
 data/quarantine/   ➜ bad rows (CSV + DB)
@@ -110,8 +114,8 @@ logs/              ➜ pipeline_<date>.log
 sql/init.sql       ➜ creates Postgres schema
 src/               ➜ ETL modules
 tests/             ➜ pytest suite
-
-🔍 Logs & Error Handling
+```
+### 🔍 Logs & Error Handling
 
 INFO → Normal progress
 

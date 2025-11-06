@@ -1,0 +1,16 @@
+# ecommerce-sales-etl
+
+Scalable daily-batch ETL for multi-channel sales data.
+
+## Quick start
+1. Clone repo  
+2. Create Postgres DB `ecommerce_sales` and run `sql/init.sql`  
+3. Update `config.yaml` with your DB credentials  
+4. `pip install -r requirements.txt`  
+5. `python src/main.py`
+
+## Outputs
+- Clean data → `sales.sales_cleaned`  
+- Daily report → `output/daily_sales_report_&lt;date&gt;.csv` + `sales.sales_daily_report`  
+- Invalid rows → `data/quarantine/quarantined_&lt;date&gt;.csv` + `sales.sales_quarantine`  
+- Logs → `logs/pipeline_&lt;date&gt;.log`

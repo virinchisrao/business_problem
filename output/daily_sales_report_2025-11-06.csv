@@ -1,0 +1,3 @@
+channel,total_sales,total_revenue,top_products
+online,50,1350.0,"[{""product_id"": ""P101"", ""product_name"": ""Wireless Mouse"", ""qty"": 50}, {""product_id"": ""P102"", ""product_name"": ""Keyboard"", ""qty"": 20}, {""product_id"": ""P103"", ""product_name"": ""Monitor"", ""qty"": 5}]"
+store,25,1500.0,"[{""product_id"": ""P101"", ""product_name"": ""Wireless Mouse"", ""qty"": 50}, {""product_id"": ""P102"", ""product_name"": ""Keyboard"", ""qty"": 20}, {""product_id"": ""P103"", ""product_name"": ""Monitor"", ""qty"": 5}]"

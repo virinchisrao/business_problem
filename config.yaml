@@ -1,0 +1,15 @@
+db:
+  host: localhost
+  port: 5432
+  name: ecommerce_sales
+  user: postgres
+  password: devpass
+
+files:
+  raw_dir: data/raw
+  quarantine_dir: data/quarantine
+  output_dir: output
+  log_dir: logs
+
+report:
+  date_format: "%Y-%m-%d"

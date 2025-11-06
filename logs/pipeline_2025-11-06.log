@@ -1,0 +1,215 @@
+2025-11-06 16:52:10,137 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:52:10,341 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:52:10,454 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:52:10,528 | INFO | Aggregation complete
+2025-11-06 16:52:10,696 | ERROR | Pipeline failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "etl_user"
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 18, in save_clean_to_db
+    with get_conn(db_cfg) as conn:
+         ^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\src\load.py", line 8, in get_conn
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "etl_user"
+
+2025-11-06 16:53:12,844 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:53:12,851 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:53:12,860 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:53:12,879 | INFO | Aggregation complete
+2025-11-06 16:53:12,951 | ERROR | Pipeline failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgress"
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 18, in save_clean_to_db
+    with get_conn(db_cfg) as conn:
+         ^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\src\load.py", line 8, in get_conn
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgress"
+
+2025-11-06 16:53:41,077 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:53:41,086 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:53:41,093 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:53:41,114 | INFO | Aggregation complete
+2025-11-06 16:53:41,204 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 16:57:34,287 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:57:34,370 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:57:34,435 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:57:34,478 | INFO | Aggregation complete
+2025-11-06 16:57:34,669 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 16:58:15,008 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:58:15,015 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:58:15,022 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:58:15,039 | INFO | Aggregation complete
+2025-11-06 16:58:15,111 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 16:59:21,228 | INFO | Starting ETL for 2025-11-06
+2025-11-06 16:59:21,235 | INFO | Loaded 4 rows from raw files
+2025-11-06 16:59:21,242 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 16:59:21,259 | INFO | Aggregation complete
+2025-11-06 16:59:21,425 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 17:00:27,560 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:00:27,568 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:00:27,576 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:00:27,591 | INFO | Aggregation complete
+2025-11-06 17:00:27,653 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 17:01:34,603 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:01:34,611 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:01:34,618 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:01:34,635 | INFO | Aggregation complete
+2025-11-06 17:01:34,706 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 17:02:12,903 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:02:12,909 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:02:12,917 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:02:12,933 | INFO | Aggregation complete
+2025-11-06 17:02:12,996 | ERROR | Pipeline failed: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgrs"
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 18, in save_clean_to_db
+    with get_conn(db_cfg) as conn:
+         ^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\src\load.py", line 8, in get_conn
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "E:\ecommerce-sales-etl\venv\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgrs"
+
+2025-11-06 17:02:41,378 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:02:41,388 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:02:41,396 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:02:41,410 | INFO | Aggregation complete
+2025-11-06 17:02:41,483 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 17:04:13,540 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:04:13,547 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:04:13,555 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:04:13,569 | INFO | Aggregation complete
+2025-11-06 17:04:13,630 | ERROR | Pipeline failed: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 39, in main
+    save_clean_to_db(clean_df, cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 21, in save_clean_to_db
+    cur.execute("""
+psycopg2.errors.UndefinedTable: relation "sales.sales_cleaned" does not exist
+LINE 2:                     INSERT INTO sales.sales_cleaned
+                                        ^
+
+2025-11-06 17:06:23,650 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:06:23,657 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:06:23,664 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:06:23,681 | INFO | Aggregation complete
+2025-11-06 17:06:23,757 | INFO | Clean data saved to DB
+2025-11-06 17:06:23,834 | ERROR | Pipeline failed: can't adapt type 'dict'
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 51, in main
+    save_report(agg_df, execution_date, cfg['files']['output_dir'], cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 57, in save_report
+    cur.execute("""
+psycopg2.ProgrammingError: can't adapt type 'dict'
+2025-11-06 17:07:12,125 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:07:12,134 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:07:12,150 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:07:12,201 | INFO | Aggregation complete
+2025-11-06 17:07:12,288 | INFO | Clean data saved to DB
+2025-11-06 17:07:12,348 | ERROR | Pipeline failed: can't adapt type 'dict'
+Traceback (most recent call last):
+  File "E:\ecommerce-sales-etl\src\main.py", line 51, in main
+    save_report(agg_df, execution_date, cfg['files']['output_dir'], cfg['db'])
+  File "E:\ecommerce-sales-etl\src\load.py", line 58, in save_report
+    cur.execute("""
+psycopg2.ProgrammingError: can't adapt type 'dict'
+2025-11-06 17:09:49,420 | INFO | Starting ETL for 2025-11-06
+2025-11-06 17:09:49,428 | INFO | Loaded 4 rows from raw files
+2025-11-06 17:09:49,436 | INFO | Clean rows: 4, Quarantined: 0
+2025-11-06 17:09:49,450 | INFO | Aggregation complete
+2025-11-06 17:09:49,534 | INFO | Clean data saved to DB
+2025-11-06 17:09:49,609 | INFO | Daily report saved
